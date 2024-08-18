@@ -1,0 +1,164 @@
+body{
+    height: 97vh;
+    background-color: #bf96e3;
+    background: url("bg-image2.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 430px;
+    box-shadow: none;
+    background: none;
+}
+
+.envelope-front, .envelope-back{
+    height: 430px;
+    width: 600px;
+    background-color: #815ac0;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 42%;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+}
+
+.envelope-front h2{
+    font-family: 'Dancing Script', cursive;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    font-size: 2.2rem;
+}
+
+.envelope-front h3{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.envelope-front i{
+    margin-left: 47%;
+    font-size: 4rem;
+}
+
+.envelope-front #your-friend{
+    text-align: right;
+    margin-right: 2rem;
+    margin-top: 12rem;
+}
+
+.envelope-back {
+    transform: rotateY(-180deg);
+}
+
+.para{
+    position: absolute;
+    bottom: 3rem;
+    right: 40%;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 1.5rem;
+    transition: all 0.8s ease;
+}
+
+.back {
+    position: relative;
+    height: 430px;
+    width: 600px;
+    background-color: #6247aa;
+}
+
+.letter {
+    position: absolute;
+    background-color: #fff;
+    width:540px;
+    height: 370px;
+    top:30px;
+    left:30px;
+    transition: .4s;
+}
+
+.front {
+    position: absolute;
+    border-right: 300px solid #815ac0;
+    border-top: 215px solid transparent;
+    border-bottom: 215px solid transparent;
+    height:0;
+    width:0;
+    top:0;
+    left:300px;
+    z-index:3;
+}
+
+.front:before {
+    content:"";
+    position: absolute;
+    border-left: 300px solid #815ac0;
+    border-top: 215px solid transparent;
+    border-bottom: 215px solid transparent;
+    height:0;
+    width:0;
+    top:-215px;
+    left:-300px;
+}
+
+.front:after {
+    content:"";
+    position: absolute;
+    border-bottom: 220px solid #7251b5;
+    border-left: 300px solid transparent;
+    border-right:300px solid transparent;
+    height:0;
+    width:0;
+    top:-5px;
+    left:-300px;
+}
+
+.top {
+    position: absolute;
+    border-top: 220px solid #9163cb;
+    border-left: 300px solid transparent;
+    border-right:300px solid transparent;
+    height:0;
+    width:0;
+    top:0;
+    transform-origin: top;
+    transition: .4s;
+}
+
+.text {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    margin-top:30px;
+    font-weight: bold;
+}
+
+.letter p{
+    margin: 2rem ;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4081;
+    animation: fall linear infinite;
+  }
+
+@keyframes fall {
+    to {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
