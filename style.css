@@ -162,3 +162,146 @@ body{
       opacity: 0;
     }
   }
+
+
+@media(max-width: 480px){
+    
+    .card {
+        perspective: 150rem;
+        position: relative;
+        height: 250px;
+        box-shadow: none;
+        background: none;
+    }
+
+    .envelope-front, .envelope-back{
+        height: 250px;
+        width: 360px;
+        background-color: #815ac0;
+        border-radius: 15px;
+        transition: all 0.8s ease;
+        backface-visibility: hidden;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 100%;
+        box-shadow: 0 0 15px black;
+        cursor: pointer;
+    }
+
+    .envelope-front h2{
+        font-family: 'Dancing Script', cursive;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .envelope-front h3{
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    .envelope-front #your-friend{
+        text-align: right;
+        margin-right: 1rem;
+        margin-top: 5rem;
+        font-size: 1.5rem;
+    }
+
+    .envelope-back {
+        transform: rotateY(-180deg);
+    }
+
+    .para{
+        position: absolute;
+        bottom: 3rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: 'Libre Caslon Text', serif;
+        font-size: 1.5rem;
+        transition: all 0.8s ease;
+    }
+
+    .back {
+        position: relative;
+        height: 250px;
+        width: 360px;
+        background-color: #6247aa;
+    }
+
+    .letter {
+        position: absolute;
+        background-color: #fff;
+        width:300px;
+        height: 200px;
+        top:30px;
+        left:30px;
+        transition: .4s;
+    }
+
+    .front {
+        position: absolute;
+        border-right: 182px solid #815ac0;
+        border-top: 125px solid transparent;
+        border-bottom: 125px solid transparent;
+        height:0;
+        width:0;
+        top:0;
+        left:180px;
+        z-index:3;
+    }
+
+    .front:before {
+        content:"";
+        position: absolute;
+        border-left: 182px solid #815ac0;
+        border-top: 125px solid transparent;
+        border-bottom: 125px solid transparent;
+        height:0;
+        width:0;
+        top:-125px;
+        left:-180px;
+    }
+
+    .front:after {
+        content:"";
+        position: absolute;
+        border-bottom: 130px solid #7251b5;
+        border-left: 182px solid transparent;
+        border-right:182px solid transparent;
+        height:0;
+        width:0;
+        top: -5px;
+        left:-181px;
+    }
+
+    .top {
+        position: absolute;
+        border-top: 150px solid #9163cb;
+        border-left: 183px solid transparent;
+        border-right:183px solid transparent;
+        height:0;
+        width:0;
+        top:0;
+        transform-origin: top;
+        transition: .4s;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 1.6rem;
+        font-family: 'Dancing Script', cursive;
+        margin-top:30px;
+        font-weight: bold;
+    }
+
+    .letter p{
+        margin: 2rem ;
+        font-family: 'Libre Caslon Text', serif;
+    }
+}

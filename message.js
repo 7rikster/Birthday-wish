@@ -63,10 +63,12 @@ setTimeout(() => {
     message.classList.remove("animation");
 },25000)
 
+const text = document.getElementsByClassName("text");
 setTimeout(() => {
     
     message.innerHTML = "Once again Happiest Birthday to you my friend! Thank you for being with me and helping me with everything.";
     image.style.display = "None";
+    text.style.height = "100vh";
     image.classList.add("animation");
     message.classList.add("animation");
 },30000);
